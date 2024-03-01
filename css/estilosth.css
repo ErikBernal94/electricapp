@@ -1,0 +1,68 @@
+.nav-scroller {
+    border-color: darkblue !important;
+}
+.titulo-destacado {
+    font-size: 30px;
+    color: #000000 !important; 
+    
+}
+
+.boton-usuario {
+    background-color: hwb(49 3% 3%); /* Color de fondo del botón */
+    color: #000000; /* Color del texto */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 20px; /* Tamaño del texto */
+}
+
+.titulo-secundario {
+    font-size: 60px;
+    color: rgb(0, 0, 0) !important; 
+    display: block !important; 
+    border: solid 5px  hsl(59, 97%, 49%) !important;
+}
+
+p {
+    font-size: 20px !important; 
+}
+
+
+h3 {
+    font-size: 25px; 
+    color: hwb(0 0% 100%) !important;
+}
+
+/* Estilo para las etiquetas */
+.etiqueta {
+    display: inline-block; /* Mantiene las etiquetas en la misma línea */
+    margin-bottom: 40px; /* Agrega un espacio entre las etiquetas y los campos de fecha */
+    font-size: 20px;
+}
+
+/* Estilo para los campos de fecha */
+.campo-fecha {
+    display: inline-block; /* Mantiene los campos de fecha en la misma línea */
+    padding: 10px; /* Agrega un espacio interno alrededor de los campos de fecha */
+    border: 5px solid hwb(54 0% 50%); /* Agrega un borde alrededor de los campos de fecha */
+    border-radius: 5px; /* Agrega esquinas redondeadas a los campos de fecha */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilo para el mensaje */
+.mensaje {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para el select */
+.form-select {
+    width: 50%;
+    padding: 10px;
+    border: 5px solid #746805;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}

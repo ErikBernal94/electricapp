@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="css/estilosth.css" rel="stylesheet">
+    <title>Informe Editorial</title>
+</head>
+<body>
+    <div class="container">
+      <header class="border-bottom lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <img src="Imagenes/Logo.png" alt="Logo Uniandes">
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-body-emphasis text-decoration-none titulo-destacado" href="#">Sistema de Informes Editoriales de la Universidad de los Andes</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary boton-usuario" href="Iniciodesesion.html">Cerrar sesión</a>
+          </div>
+        </div>
+
+          <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-md-6 pt-1">
+              </div>
+          <div class="col-8 text-center">
+            
+          </div>  
+        </div>
+       
+      </header>
+      
+      <div class="nav-scroller py-1 mb-3 border-bottom">
+        <nav class="nav nav-underline justify-content-between">
+          <a class="nav-item nav-link link-body-emphasis" href="https://investigacioncreacion.uniandes.edu.co/es/ediciones-uniandes" target="_blank">Nosotros</a>
+          <a class="nav-item nav-link link-body-emphasis" href="https://ediciones.uniandes.edu.co/library" target="_blank">Ediciones Uniandes</a>
+          <a class="nav-item nav-link link-body-emphasis" href="https://tienda.uniandes.edu.co/es/" target="_blank">Tienda Uniandes</a>
+          <a class="nav-item nav-link link-body-emphasis" href="https://ediciones.uniandes.edu.co/library/filter?latest_issues=latest_issues" target="_blank">Novedades </a>
+          <a class="nav-item nav-link link-body-emphasis" href="https://ediciones.uniandes.edu.co/library/filter?latest_issues=latest_issues" target="_blank">Informes </a>  
+        </nav>
+      </div>
+        <br>
+        <div class="col-12 text-center">
+          <a class="blog-header-logo text-body-emphasis text-decoration-none titulo-secundario" href="#">Informe Financiero</a>
+        </div>
+
+        <br>
+
+
+        <div class="row mb-1">
+
+          <p> Descubre nuevas perspectivas con nuestro completo informe. Explora a fondo las características asociadas a los costos de tu proyecto y obtén una valiosa herramienta para la toma de decisiones informadas.</p>
+
+            <div class="col-8">
+              <div class="col-md-12 text-left">
+                <h2>Por favor selecciona la fecha de inicio y fin </h2>
+                <br>
+              
+                <label for="fecha-inicio" class="etiqueta">Fecha de Inicio:</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" class="campo-fecha">
+            
+                <label for="fecha-final" class="etiqueta">Fecha Final:</label>
+                <input type="date" id="fecha-final" name="fecha-final" class="campo-fecha">
+              </div>
+
+              <div class="col-md-12 text-left">
+                <h2>Por favor selecciona la Unidad a consultar</h2>
+                <br>
+                
+                <select class="form-select form-select-lg mb-12" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Antropologia</option>
+                  <option value="2">Ciencias Política</option>
+                  <option value="3">Historia</option>
+                  <option value="3">Psicología</option>
+                </select>
+              </div>
+
+              <div class="col-md-12 text-left">
+
+                <br>
+
+                <h2>Por favor selecciona lel título a consultar</h2>
+                <br>
+                <form>
+                  
+                  
+                  <select class="form-select" id="elementos" name="elementos" multiple>
+                    <option value="1">El tiempo de las ruinas</option>
+                    <option value="2">La incierta forma del tiempo</option>
+                    <option value="3">Anatomización</option>
+                    <option value="4">La Vorágine</option>
+                    <option value="5">Despues del acuerto</option>
+                    <br>
+                  </select>
+                  <br>
+
+                  <button class="btn btn-primary" type="button" id="btnGenerarInforme" >
+                    <!-- spinner-border -->
+                    <span class=" spinner-border-sm" aria-hidden="true"></span>
+                    <span role="status">Generar Informe</span>
+                  </button>
+                
+              </div>              
+            </div>
+
+            <div class="col-4">
+              <img src="Imagenes/financiero.png" alt="Biblioteca" style="max-width: 100%;">
+            </div>
+
+
+                    
+            
+        </div>
+
+
+        <div class="row md-1">
+
+          <div id="informes" style="display: none;">
+            <p></p>
+            <p></p>
+            <div class="col-12 text-center">
+              <a class="blog-header-logo text-body-emphasis text-decoration-none titulo-secundario" href="#">Informe</a>
+            </div>
+            <p></p>
+            <p></p>
+            
+            <div id="informeUno" style="display: none;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Unidad</th>
+                    <th scope="col">Costo del proyecto</th>
+                    <th scope="col">PVP</th>
+                    <th scope="col">Ejemplares comercializados</th>
+                    <th scope="col">Ventas brutas proyectadas</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <th scope="row">La Vorágine</th>
+                    <td>Ciencias Socialese</td>
+                    <td>17.200.000</td>
+                    <td>$68.000</td>
+                    <td>310</td>
+                    <td>$21.080.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">El tiempo de las ruinas</th>
+                    <td>Ciencias Sociales</td>
+                    <td>$14.600.000</td>
+                    <td>$36.000</td>
+                    <td>310</td>
+                    <td>$11.346.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">La incierta forma del tiempo</th>
+                    <td>Ciencias Socialea</td>
+                    <td>$8.900.000</td>
+                    <td>$45.000</td>
+                    <td>310</td>
+                    <td>$13.950.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Entre líenas</th>
+                    <td>Ciencias Socialea</td>
+                    <td>18.600.000</td>
+                    <td>$116.000</td>
+                    <td>290</td>
+                    <td>$33.640.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Historia de la Basura en Bogotá</th>
+                    <td>Ciencias Socialea</td>
+                    <td>9.900.000</td>
+                    <td>$42.600</td>
+                    <td>310</td>
+                    <td>$13.206.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">¿Cómo se justifica una invasión?</th>
+                    <td>Ciencias Socialea</td>
+                    <td>7.500.000</td>
+                    <td>$36.000</td>
+                    <td>310</td>
+                    <td>$11.600.000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Hablar y vivir en América</th>
+                    <td>Ciencias Socialea</td>
+                    <td>17.500.000</td>
+                    <td>145.000</td>
+                    <td>860</td>
+                    <td>$124.700.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+     
+
+    </div>
+            
+          <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+            <p>Universidad de los Andes | Vigilada Mineducación | Reconocimiento como Universidad: Decreto 1297 del 30 de mayo de 1964.|Reconocimiento personería jurídica: Resolución 28 del 23 de febrero de 1949 Minjusticia.
+                 <a href="https://ediciones.uniandes.edu.co/library">Uniandes</a> 
+            <p class="mb-0">
+              
+            </p>
+          </footer>
+    
+          <script src="../js/bootstrap.bundle.min.js"></script>
+          <script>
+
+            var consularInformeBtn = document.getElementById("btnGenerarInforme");
+
+            consularInformeBtn.addEventListener('click', function() {
+              var divTitulo = document.getElementById('informes');
+              var divInforme1 = document.getElementById('informeUno');
+
+              if (divTitulo.style.display == 'none') {
+                divTitulo.style.display = 'block';
+                divInforme1.style.display = 'block';
+              } 
+            
+
+
+              
+            });
+
+
+
+
+          </script>
+
+
+          </body>
+</html>          
